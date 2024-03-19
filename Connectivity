@@ -1,0 +1,8 @@
+from app import db, login
+from flask_login import UserMixin
+
+class Student(UserMixin, db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(64), index=True, unique=True)
+    password = db.Column(db.String(128))
+    projects =
